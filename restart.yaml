@@ -1,0 +1,7 @@
+---
+- hosts: k8s*
+  gather_facts: no
+  tasks:
+    - name: restart
+      command: /sbin/shutdown -r now
+      become: yes
